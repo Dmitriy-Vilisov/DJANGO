@@ -1,5 +1,6 @@
 #1 Создаем пользователей
 from django.contrib.auth.models import User
+
 user=User.objects.create_user('User1', password='User1')
 user=User.objects.create_user('User2', password='User2')
 user.is_superuser=False

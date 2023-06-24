@@ -78,6 +78,9 @@ class Post(models.Model):
     def preview(self):   # Превью длинной 124 символа
         return f'{self.text[:124]}...'
 
+    def __str__(self):
+        return f'{self.news.title()}: {self.text[:10]}'  # !!!!!!!!!!!!!!!!!!!!
+
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
 
@@ -86,6 +89,8 @@ class PostCategory(models.Model):
     post = models.ForeignKey(Post, null=True, on_delete=models.CASCADE)  # Связь: один ко многим
     category = models.ForeignKey(Category, null=True, on_delete=models.CASCADE)  # Связь: один ко многим
 
+    def __str__(self):
+        return self.category  # !!!!!!!!!!!!!!!!!!!
 
 class Comment(models.Model):
     comment_post = models.ForeignKey(Post, on_delete=models.CASCADE)

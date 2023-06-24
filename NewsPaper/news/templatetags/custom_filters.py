@@ -3,6 +3,10 @@ from django import template
 
 register = template.Library()
 
+NEWS_ARTICLES = {
+   'news': 'N',
+   'art': 'A',
+}
 
 CENSOR_WORDS = [
     'котопес',
@@ -11,6 +15,11 @@ CENSOR_WORDS = [
     'сосиска',
     'угроза'  # !!!
 ]
+
+@register.filter()
+def post(value, code='art'):
+    postfix = NEWS_ARTICLES[code]
+    return f'{value} {postfix}'
 
 
 @register.filter()

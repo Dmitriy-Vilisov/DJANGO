@@ -10,8 +10,8 @@ Post
 <!-- В контенте на странице мы выводим сам post, идентификатор которого был передан в url -->
 {% block content %}
 <!--выводится информация по 1-4 статье/новости-->
-<h1>{{post.title|censor}}</h1>
-<p style="font-size: 15px;" align="right">{{ post.posting_time|date:'d.m.Y' }}</p>
-<div style="font-size: 20px" align="right">{{ post.text|censor }}</div>
+    <h1>{{post.title|censor}}</h1>
+    <p style="font-size: 15px;" align="right">{{ post.posting_time|date:'d.m.Y' }}</p>
+    <div style="font-size: 20px" align="right">{{ post.text|censor }}</div>
 
 {% endblock content %}
