@@ -8,14 +8,7 @@
 Написан собственный фильтр censor, который заменяет буквы нежелательных слов в заголовках и текстах статей на символ «*».
 Все новые страницы используют шаблон default.html как основу.
 
-
-
-This project is a stage of training in the skillfactory online school. D6.6 Final task
-
-A new page has been created with the address /news/, which displays a list of all the news.
-All articles are displayed as a title, publication date and the first 20 characters of the text.
-The news is displayed in order from the most recent to the oldest.
-A separate page has been made for full information about the article /news/<news id>.
-This page contains all the information about the article. Title, text, and upload date in day format.month. year.
-A custom censor filter has been written, which replaces the letters of unwanted words in the titles and texts of articles with the "*" symbol.
-All new pages use the template default.html as a basis
+Проект обновлен в связи с выполнением итогового задания D7.7
+Добавлен постраничный вывод (применена пагинация)
+Реализована возможность искать новости по следующим критериям: автору, названию, позже указываемой даты
+Запрограммированы страницы создания, редактирования и удаления новостей и статей.
